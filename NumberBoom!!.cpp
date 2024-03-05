@@ -11,10 +11,10 @@ int main()
 	while(1)
 	{
 		int x;
-		cout << "£¨"<<min<<"~"<<max<<")\n";
+		cout << "Â£Â¨"<<min<<"~"<<max<<")\n";
 		cin >> x;
 		if (x > max || x < min)
-			cout << "(#`O¡ä)²»½²ÎäµÂ"<<endl;
+			cout << "ä¸è®²æ­¦å¾·ï¼ï¼ï¼"<<endl;
 		else if (x < num)
 		{
 			//cout << x << '~' << max<<endl;
