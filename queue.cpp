@@ -1,37 +1,37 @@
 #include<iostream>
-#include<stack>
 #include<vector>
+#include<queue>
+#include<list>
 using namespace std;
 int main()
 {
+	int m;
+	cin >> m;
+	vector<queue<int>>Q(m);
 	int n;
 	cin >> n;
-	vector<stack<int>>a(n);
-	int q;
-	cin >> q;
-	for (int i = 0; i <q; i++)
+	for (int i = 0; i < n; i++)
 	{
-		int ask;
-		cin >> ask;
-		switch (ask)
+		int index;
+		cin >> index;
+		switch (index)
 		{
 		case 0:
 		{
-			int t;
-			int x;
+			int t, x;
 			cin >> t;
 			cin >> x;
-			a[t].push(x);
+			Q[t].push(x);
 			break;
 		}
 		case 1:
 		{
 			int t;
 			cin >> t;
-			if (!a[t].empty())
+			if (!Q[t].empty())
 			{
-				cout << a[t].top() << endl;
-				
+				int k = Q[t].front();
+				cout << k<<endl;
 			}
 			break;
 		}
@@ -39,11 +39,11 @@ int main()
 		{
 			int t;
 			cin >> t;
-			if (!a[t].empty())
+			if (!Q[t].empty())
 			{
-				a[t].pop();
-				break;
+				Q[t].pop();
 			}
+			break;
 		}
 		}
 	}
